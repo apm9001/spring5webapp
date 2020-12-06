@@ -15,6 +15,7 @@ public class Author {
 
 	private String firstName;
 	private String lastName;
+
 	@ManyToMany(mappedBy = "authors")
 	private Set<Book> books = new HashSet<>();
 
@@ -64,7 +65,6 @@ public class Author {
 				"id=" + id +
 				", firstName='" + firstName + '\'' +
 				", lastName='" + lastName + '\'' +
-				", books=" + books +
 				'}';
 	}
 
